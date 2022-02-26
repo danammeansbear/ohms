@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
-namespace ohmscontroller.Controllers
+namespace ohmsController.Controllers
 {
-    public class HelloWorldController : Controller
+    public class ohmsController : Controller
     {
+        // 
+        // GET: /ohms/
         public IActionResult Index()
         {
             return View();
         }
-        //
-        // GET: HelloWorld/CalculateOhmValue
+        // 
+        // GET: /ohms/CalculateOhmValue
         public IActionResult CalculateOhmValue(string bandAColor,string bandBColor, string bandCColor, string bandDColor,int numTimes = 1)
         {
             ViewData["bandAMessage"] = "Current Color of band A is : " + bandAColor;
