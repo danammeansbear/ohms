@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ohms.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ohmsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ohmsContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

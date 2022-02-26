@@ -2,8 +2,11 @@
 {
     public class ohmsClass
     {
-        // Ring Color
+        // Class contains an Id field, which is required
+        // by the database for the primary key.
         public int Id { get; set; }
+
+        // Ring Color
         public string Name { get; set; }
         public string Code { get; set; }
         public int RAL { get; set; }
@@ -11,7 +14,7 @@
         //Signigicant Figures
         public int SigFig { get; set; }
         
-        //multiplier
+        //Multiplier
         public long Multiplier { get; set; }
         public long Multiplier2 { get; set; }
         
@@ -29,7 +32,7 @@
         for resistors. Write a class that implements the following interface. Feel free
         to include any supporting types as necessary.
         
-        
+        */
         public interface IOhmValueCalculator
         {
             /// <summary>
@@ -41,6 +44,6 @@
             /// <param name="bandDColor">The color of the tolerance value band.</param>
             int CalculateOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor);
         }
-        */
+       
     }
 }
