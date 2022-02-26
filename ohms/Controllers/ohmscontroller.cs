@@ -5,14 +5,12 @@ namespace ohmsController.Controllers
 {
     public class ohmsController : Controller
     {
-        // 
-        // GET: /ohms/
+       
         public IActionResult Index()
         {
             return View();
         }
-        // 
-        // GET: /ohms/CalculateOhmValue
+        
         public IActionResult CalculateOhmValue(string bandAColor,string bandBColor, string bandCColor, string bandDColor,int numTimes = 1)
         {
             ViewData["bandAMessage"] = "Current Color of band A is : " + bandAColor;
