@@ -10,12 +10,13 @@ namespace ohmscontroller.Controllers
             return View();
         }
 
-        public IActionResult CalculateOhmValue(string bandAColor,string bandBColor, string bandCColor, string bandDColor)
+        public IActionResult CalculateOhmValue(string bandAColor,string bandBColor, string bandCColor, string bandDColor,int numTimes = 1)
         {
             ViewData["bandAMessage"] = "Current Color of band A is : " + bandAColor;
             ViewData["bandBMessage"] = "Current Color of band B is : " + bandBColor;
             ViewData["bandCMessage"] = "Current Color of band C is : " + bandCColor;
             ViewData["bandDMessage"] = "Current Color of band D is : " + bandDColor;
+            ViewData["NumTimes"] = numTimes;
 
 
             return View();
