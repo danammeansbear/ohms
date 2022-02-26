@@ -11,10 +11,16 @@ using ohms.Models;
 
 namespace ohms.Controllers
 {
+
     public class ohmsClassesController : Controller
     {
         private readonly ohmsContext _context;
-
+        public ActionResult YourAction()
+        {
+            //C# code here
+            ohms
+            return View();
+        }
         public ohmsClassesController(ohmsContext context)
         {
             _context = context;
