@@ -1,4 +1,8 @@
-﻿namespace ohms.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ohms.Models
 {
     public class ohmsClass
     {

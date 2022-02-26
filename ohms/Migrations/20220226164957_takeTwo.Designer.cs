@@ -11,8 +11,8 @@ using ohms.Data;
 namespace ohms.Migrations
 {
     [DbContext(typeof(ohmsContext))]
-    [Migration("20220226034810_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220226164957_takeTwo")]
+    partial class takeTwo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,15 +42,16 @@ namespace ohms.Migrations
                     b.Property<long>("Multiplier")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("Multiplier2")
-                        .HasColumnType("bigint");
+                    b.Property<double>("Multiplier2")
+                        .HasColumnType("float");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Percent")
-                        .HasColumnType("float");
+                    b.Property<string>("Percent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("Ppmk")
                         .HasColumnType("bigint");
@@ -58,8 +59,9 @@ namespace ohms.Migrations
                     b.Property<int>("RAL")
                         .HasColumnType("int");
 
-                    b.Property<int>("SigFig")
-                        .HasColumnType("int");
+                    b.Property<string>("SigFig")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TCLetter")
                         .IsRequired()
