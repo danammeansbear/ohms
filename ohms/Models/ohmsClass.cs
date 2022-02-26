@@ -16,7 +16,7 @@
         
         //Multiplier
         public long Multiplier { get; set; }
-        public long Multiplier2 { get; set; }
+        public double Multiplier2 { get; set; }
         
         //Tolerance
         public double Percent { get; set; }
