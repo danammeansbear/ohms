@@ -12,14 +12,14 @@
         public int RAL { get; set; }
         
         //Signigicant Figures
-        public int SigFig { get; set; }
+        public string SigFig { get; set; }
         
         //Multiplier
         public long Multiplier { get; set; }
         public double Multiplier2 { get; set; }
         
         //Tolerance
-        public double Percent { get; set; }
+        public string Percent { get; set; }
         public string Letter { get; set; }
         
         //Temperature coefficient
