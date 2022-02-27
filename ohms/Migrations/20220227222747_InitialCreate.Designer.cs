@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ohms.Data;
 
@@ -10,9 +11,10 @@ using ohms.Data;
 namespace ohms.Migrations
 {
     [DbContext(typeof(ohmsContext))]
-    partial class ohmsContextModelSnapshot : ModelSnapshot
+    [Migration("20220227222747_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
