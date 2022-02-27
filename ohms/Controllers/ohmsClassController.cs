@@ -15,20 +15,15 @@ namespace ohms.Controllers
     public class ohmsClassesController : Controller
     {
         private readonly ohmsContext _context;
-        /*public ActionResult YourAction()
+        public ActionResult YourAction()
         {
             //C# code here
             //algorithm
             // bandAColor + bandBColor + bandCColor(number of zeros) = q = q~=k(ohms)
             // yellow purple black orange = 470 k(ohms)
-            var ohms = from o in _context.ohmsClass
-                       select o;
-            if(!String.IsNullOrEmpty(searchString))
-            {
-
-            }
+           
             return View();
-        }*/
+        }
         public ohmsClassesController(ohmsContext context)
         {
             _context = context;

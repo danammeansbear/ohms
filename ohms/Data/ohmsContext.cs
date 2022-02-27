@@ -16,5 +16,9 @@ namespace ohms.Data
         }
 
         public DbSet<ohms.Models.ohmsClass> ohmsClass { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ohmsClass>().ToTable("ohms");
+        }
     }
 }
