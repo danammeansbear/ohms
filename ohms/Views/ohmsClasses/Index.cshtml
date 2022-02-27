@@ -46,10 +46,16 @@
         </tr>
     </thead>
     <tbody>
+foreach (var item in Model)
+   
+}
 @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
+                <label>@Html.RadioButton(item.Name, True)Yes</label>
+                <label>@Html.RadioButton(item.Name, False)No</label>
+                
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Code)
@@ -88,3 +94,6 @@
     </tbody>
 </table>
 <a class="btn btn-primary" href="@Url.Action("YourAction","ohmsCLassController")">Calculate Ohms</a>
+<dt class="ohmsClass">
+    @Html.DisplayNameFor(model => model.i)
+</dt>
