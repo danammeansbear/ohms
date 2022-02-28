@@ -16,7 +16,7 @@ namespace ohms.Controllers
     public class ohmsClassesController : Controller
     {
         private readonly ohmsContext _context;
-        public async Task<IActionResult> YourAction(string? Name)
+        public async Task<IActionResult> YourAction( )
         {
             //C# code here
             //algorithm
@@ -224,10 +224,61 @@ namespace ohms.Controllers
                         Ppmk = 0,
                         TCLetter = "-"
 
-                    }
+                    }};
+            //calculate random set of bands to show you know how to do that atleast with c#
+            //listOfColors[0].Name;
+            /*
+            for (int i = 0; i < listOfColors.Count; i++)
+            {
+                Random ran = new Random();
+                Console.WriteLine("Random Ohm " + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name);
+            }
 
+            int selectedFunction = Convert.ToInt32(Request["calkey"]);
+
+            switch (selectedFunction)
+            {
+                case 0:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor ;
+                    break;
+                case 1:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                    break;
+                case 2:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                    break;
+               
+            }
+            //return View();
+            */
+            return View();
+        }
+        public ActionResult Index(ohmsClass ohms)
+        {
+            int selectedFunction = Convert.ToInt32(Request["calkey"]);
+
+            switch (selectedFunction)
+            {
+                case 0:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                    break;
+                case 1:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                    break;
+                case 2:
+                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                    break;
+
+            }
+            //return View();
 
             return View();
+
+        }
+        public ActionResult Result(ohmsClass ohms)
+        {
+
+            return View(ohms);
         }
         public ohmsClassesController(ohmsContext context)
         {
@@ -279,7 +330,23 @@ namespace ohms.Controllers
             }
             return View(ohmsClass);
         }
-
+        /*
+        // POST: ohmsClasses/CalculateNewOhm
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> YourAction([Bind("Id,Name,Code,RAL,SigFig,Multiplier,Multiplier2,Percent,Letter,Ppmk,TCLetter")] ohmsClass ohmsClass)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(ohmsClass);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(ohmsClass);
+        }
+        */
         // GET: ohmsClasses/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

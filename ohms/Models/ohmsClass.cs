@@ -30,6 +30,14 @@ namespace ohms.Models
         public long Ppmk { get; set; }
         public string TCLetter { get; set; }
 
+        public string bandAColor { get; set; }
+        public string bandBColor { get; set; }
+        public string bandCColor { get; set; }
+        public string bandDColor { get; set; }
+        public string result { get; set; }
+
+        public bool add { get; set; }
+
         /*
         The electronic color code(http://en.wikipedia.org/wiki/Electronic_color_code) is 
         used to indicate the values or ratings of electronic components, very commonly 
