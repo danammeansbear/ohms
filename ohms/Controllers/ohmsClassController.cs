@@ -16,7 +16,7 @@ namespace ohms.Controllers
     public class ohmsClassesController : Controller
     {
         private readonly ohmsContext _context;
-        public async Task<IActionResult> YourAction( )
+        public async Task<IActionResult> YourAction(ohmsClass ohms )
         {
             //C# code here
             //algorithm
@@ -251,30 +251,22 @@ namespace ohms.Controllers
             }
             //return View();
             */
+            ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
             return View();
         }
+        
+        /*
         public ActionResult Index(ohmsClass ohms)
         {
-            int selectedFunction = Convert.ToInt32(Request["calkey"]);
-
-            switch (selectedFunction)
-            {
-                case 0:
+           
                     ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-                    break;
-                case 1:
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-                    break;
-                case 2:
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-                    break;
-
-            }
+               
             //return View();
 
             return View();
 
         }
+        */
         public ActionResult Result(ohmsClass ohms)
         {
 
