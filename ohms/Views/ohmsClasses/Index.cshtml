@@ -91,7 +91,7 @@
 <p>
     <a asp-action="YourAction">Calculate new ohm New</a>
 </p>
-@using (Html.BeginForm("Index", "ohmsClassController", FormMethod.Post, new { enctype = "multipart/form-data" })){
+@using (Html.BeginForm("Index", "Calculation", FormMethod.Post, new { enctype = "multipart/form-data" })){
 <div>
     <h2>@Html.Label("Enter Band A") : @Html.TextBox("bandAColor")</h2>
     <h2>@Html.Label("Enter Band B") : @Html.TextBox("bandBColor")</h2>
