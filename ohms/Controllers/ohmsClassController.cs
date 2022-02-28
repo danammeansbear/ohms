@@ -251,15 +251,15 @@ namespace ohms.Controllers
             }
             //return View();
             */
-            ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+           // ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
             return View();
         }
         
-        /*
+       /* 
         public ActionResult Index(ohmsClass ohms)
         {
            
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+                  //  ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
                
             //return View();
 
