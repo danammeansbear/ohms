@@ -16,6 +16,7 @@ namespace ohms.Controllers
     public class ohmsClassesController : Controller
     {
         private readonly ohmsContext _context;
+
         public async Task<IActionResult> YourAction(ohmsClass ohms )
         {
             //C# code here
@@ -24,9 +25,9 @@ namespace ohms.Controllers
             // yellow purple black orange = 470 k(ohms)
             //Name	Code	RAL	Percent [%]	Letter	[ppm/K]	Letter
             //Pink	PK	3015	–	×10−3[8]	×0.001	–	–
+            ModelState.Clear();
             string bandAColor, bandBColor, bandCColor, bandDColor;
-            //Foreach(string Name in _context.ohmsClass.FirstOrDefaultAsync(o => o.Name[))
-            
+           
             List<ohmsClass> listOfColors = new List<ohmsClass>() {
 
             new ohmsClass
@@ -225,48 +226,39 @@ namespace ohms.Controllers
                         TCLetter = "-"
 
                     }};
-            //calculate random set of bands to show you know how to do that atleast with c#
             //listOfColors[0].Name;
-            /*
+            
             for (int i = 0; i < listOfColors.Count; i++)
             {
-                Random ran = new Random();
-                Console.WriteLine("Random Ohm " + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name);
-            }
+                int selectedFunction = Convert.ToInt32(Request.Form["calkey"]);
+                //Random ran = new Random();
+                //Console.WriteLine("Random Ohm " + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name + listOfColors[ran.Next(5)].Name);
+                var None = listOfColors.SingleOrDefault(c => c.Name == "None");
+                var NoneValue = listOfColors.SingleOrDefault(c => c.SigFig == "-");
+                var Pink = listOfColors.SingleOrDefault(c => c.Name == "Pink");
+                var PinkValue = listOfColors.SingleOrDefault(c => c.SigFig == "-");
+                var Silver = listOfColors.SingleOrDefault(c => c.Name == "Silver");
+                var SilverValue = listOfColors.SingleOrDefault(c => c.SigFig == "-");
+                var Gold = listOfColors.SingleOrDefault(c => c.Name == "Gold");
+                var GoldValue = listOfColors.SingleOrDefault(c => c.SigFig == "-");
+                var Black = listOfColors.SingleOrDefault(c => c.Name == "Black");
+                var Brown = listOfColors.SingleOrDefault(c => c.Name == "Brown");
+                var Red = listOfColors.SingleOrDefault(c => c.Name == "Red");
+                var Orange = listOfColors.SingleOrDefault(c => c.Name == "Orange");
+                var Yellow = listOfColors.SingleOrDefault(c => c.Name == "Yellow");
+                var Green = listOfColors.SingleOrDefault(c => c.Name == "Green");
+                var Blue = listOfColors.SingleOrDefault(c => c.Name == "Blue");
+                var Violet = listOfColors.SingleOrDefault(c => c.Name == "Violet");
+                var Grey = listOfColors.SingleOrDefault(c => c.Name == "Grey");
+                var White = listOfColors.SingleOrDefault(c => c.Name == "White");
 
-            int selectedFunction = Convert.ToInt32(Request["calkey"]);
-
-            switch (selectedFunction)
-            {
-                case 0:
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor ;
-                    break;
-                case 1:
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-                    break;
-                case 2:
-                    ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-                    break;
-               
             }
-            //return View();
-            */
-           //ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
+           
+            
             return View();
         }
         
-       /* 
-        public ActionResult Index(ohmsClass ohms)
-        {
-           
-                  //  ohms.result = ohms.bandAColor + ohms.bandBColor + ohms.bandCColor + ohms.bandDColor;
-               
-            //return View();
-
-            return View();
-
-        }
-        */
+       
         public ActionResult Result(ohmsClass ohms)
         {
 

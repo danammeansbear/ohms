@@ -87,25 +87,23 @@
 }
     </tbody>
 </table>
-//<a class="btn btn-primary" href="@Url.Action("YourAction","ohmsCLassController")">Calculate Ohms</a>
-<p>
-    <a asp-action="YourAction">Calculate new ohm New</a>
-</p>
-@using (Html.BeginForm("Index", "Calculation", FormMethod.Post, new { enctype = "multipart/form-data" })){
+
+@using (Html.BeginForm("Index", "ohmsClasses", FormMethod.Post, new { enctype = "multipart/form-data" })){
 <div>
     <h2>@Html.Label("Enter Band A") : @Html.TextBox("bandAColor")</h2>
     <h2>@Html.Label("Enter Band B") : @Html.TextBox("bandBColor")</h2>
     <h2>@Html.Label("Enter Band C") : @Html.TextBox("bandCColor")</h2>
     <h2>@Html.Label("Enter Band D") : @Html.TextBox("bandDColor")</h2>
+    <input type="submit" name="Calculate Ohms" value="Index"/>
 </div>
 <div>   
     <h2>
 
         @Html.RadioButton("calkey", "0") Calculate populated bands
            <br>
-    </h2>            
+    </h2>
+    <a class="btn btn-primary" href="@Url.Action("Index","ohmsClasses")">Calculate Ohms</a>
 </div>
-    <input type="submit" name="Index" value="Index"/>
 
 <div>
     @Html.TextBox("result")

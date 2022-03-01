@@ -47,6 +47,12 @@ namespace ohms.Models
             /// <param name="bandBColor">The color of the second significant figure band.</param>
             /// <param name="bandCColor">The color of the decimal multiplier band.</param>
             /// <param name="bandDColor">The color of the tolerance value band.</param>
+            //C# code here
+            //algorithm
+            // bandAColor + bandBColor + bandCColor(number of zeros) = q = q~=k(ohms)
+            // yellow purple black orange = 470 k(ohms)
+            //Name	Code	RAL	Percent [%]	Letter	[ppm/K]	Letter
+            //Pink	PK	3015	–	×10−3[8]	×0.001	–	–
             int CalculateOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor);
         }
        
