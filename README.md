@@ -1,10 +1,23 @@
 # ohms
 
 Prerequisites
-Visual Studio
-Visual Studio Code
-Visual Studio for Mac
+
+
 Visual Studio 2022 with the ASP.NET and web development workload.
 
+open soltuion in visual studio 
 
-run cntrl + f5
+Go to the file explorer and right clickon the ohms.sln file 
+
+click open in visual studio
+
+
+to run
+
+ctrl + f5
+
+click on the ohms calculator tab
+ 
+  add your bands
+  
+  get your result.
