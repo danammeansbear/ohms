@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ohms", "ohms\ohms.csproj", "{34B86067-60F1-4948-A212-BA70E070692C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ohms", "ohms\ohms.csproj", "{34B86067-60F1-4948-A212-BA70E070692C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ohmsColorCodeCalculator", "ohmsColorCodeCalculator", "{27DFC867-00BD-4794-A2EA-0345D26CF1DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ohmsColorCodeCalculator.Core", "ohmsColorCodeCalculator.Core", "{F5A42974-FD63-4CD5-B1F6-B08CCBDAFE8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculators", "Calculators", "{ADE640D8-33E4-47E2-B98A-B7F3654C0E10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ohmsValueCalculator", "ohmsValueCalculator", "{DADD5998-0536-483F-A89F-BC27F7C2CB1E}"
+	ProjectSection(SolutionItems) = preProject
+		FourBandResistorCalculator.cs = FourBandResistorCalculator.cs
+		IOhmValueCalculator.cs = IOhmValueCalculator.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +30,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADE640D8-33E4-47E2-B98A-B7F3654C0E10} = {F5A42974-FD63-4CD5-B1F6-B08CCBDAFE8C}
+		{DADD5998-0536-483F-A89F-BC27F7C2CB1E} = {ADE640D8-33E4-47E2-B98A-B7F3654C0E10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CFF49DE1-7C7B-4F39-81C0-B5EA9C5D762F}
